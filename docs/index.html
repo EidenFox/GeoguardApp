@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoGuard - Segurança Colaborativa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Navegação -->
+    <nav class="fixed w-full z-50 glass border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="shield-check" class="text-blue-600 w-8 h-8"></i>
+                    <span class="text-2xl font-bold tracking-tight text-blue-900">GeoGuard</span>
+                </div>
+                <a href="http://geoguardapp.site" target="_blank"
+                    class="bg-blue-600 text-white px-5 py-2 rounded-full font-medium hover:bg-blue-700 transition shadow-lg shadow-blue-200">
+                    Testar Aplicativo
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-20 hero-gradient text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="z-10">
+                    <span
+                        class="inline-block px-3 py-1 bg-blue-500/30 rounded-full text-sm font-semibold mb-4 border border-white/20">
+                        Projeto 2026 • Maringá - Curitiba
+                    </span>
+                    <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
+                        Segurança colaborativa baseada em <span class="text-blue-300">localização</span>.
+                    </h1>
+                    <p class="text-xl text-blue-100 mb-8 max-w-lg">
+                        Conectamos vítimas e testemunhas automaticamente para facilitar a coleta de evidências de forma
+                        segura e anônima.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#solucao"
+                            class="bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">Saiba
+                            mais</a>
+                        <a href="http://geoguardapp.site" target="_blank"
+                            class="border border-white/30 hover:bg-white/10 px-8 py-3 rounded-lg font-bold transition">Ver
+                            Protótipo</a>
+                    </div>
+                </div>
+                <div class="relative hidden md:block">
+                    <!-- Mockup de App abstrato -->
+                    <div
+                        class="w-64 h-[500px] bg-white rounded-[3rem] border-8 border-gray-900 shadow-2xl mx-auto overflow-hidden relative">
+                        <div class="absolute top-0 w-full h-6 bg-gray-900 flex justify-center items-end pb-1">
+                            <div class="w-16 h-1 bg-gray-800 rounded-full"></div>
+                        </div>
+                        <div class="p-4 pt-10">
+                            <div class="w-full h-40 bg-blue-50 rounded-xl mb-4 flex items-center justify-center">
+                                <i data-lucide="map-pin" class="text-blue-600 w-12 h-12 opacity-50"></i>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="h-4 bg-gray-100 rounded w-3/4"></div>
+                                <div class="h-4 bg-gray-100 rounded w-full"></div>
+                                <div class="h-10 bg-red-600 rounded-lg mt-10"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Decorativos -->
+                    <div
+                        class="absolute top-1/4 -right-4 bg-white p-4 rounded-xl shadow-xl text-gray-800 animate-bounce">
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                            <span class="text-sm font-bold">Ocorrência Próxima!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Problema -->
+    <section id="problema" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">O Problema</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto rounded"></div>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="p-6 border border-gray-100 rounded-2xl bg-gray-50 card-hover text-center">
+                    <i data-lucide="search-x" class="w-12 h-12 text-red-500 mx-auto mb-4"></i>
+                    <h3 class="font-bold mb-2">Falta de Provas</h3>
+                    <p class="text-sm text-gray-600">Muitas ocorrências como assalto e assédio acabam sem punição por
+                        falta de evidências.</p>
+                </div>
+                <div class="p-6 border border-gray-100 rounded-2xl bg-gray-50 card-hover text-center">
+                    <i data-lucide="user-minus" class="w-12 h-12 text-red-500 mx-auto mb-4"></i>
+                    <h3 class="font-bold mb-2">Testemunhas Ocultas</h3>
+                    <p class="text-sm text-gray-600">Raramente testemunhas são identificadas no calor do momento.</p>
+                </div>
+                <div class="p-6 border border-gray-100 rounded-2xl bg-gray-50 card-hover text-center">
+                    <i data-lucide="file-warning" class="w-12 h-12 text-red-500 mx-auto mb-4"></i>
+                    <h3 class="font-bold mb-2">Dificuldade em Reunir Dados</h3>
+                    <p class="text-sm text-gray-600">Vítimas sozinhas têm dificuldade técnica e emocional para reunir
+                        evidências.</p>
+                </div>
+                <div class="p-6 border border-gray-100 rounded-2xl bg-gray-50 card-hover text-center">
+                    <i data-lucide="map" class="w-12 h-12 text-red-500 mx-auto mb-4"></i>
+                    <h3 class="font-bold mb-2">Zonas Cegas</h3>
+                    <p class="text-sm text-gray-600">Falta de informação em tempo real sobre áreas perigosas na cidade.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solução & Valor -->
+    <section id="solucao" class="py-24 bg-blue-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6 italic">A Solução GeoGuard</h2>
+                    <p class="text-xl text-blue-100 mb-8">
+                        Não somos apenas um rastreador. Somos uma plataforma de construção de evidências reais.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="text-blue-400"></i>
+                            <span>Inteligência baseada em geolocalização precisa.</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="text-blue-400"></i>
+                            <span>Conexão automática entre vítimas e pessoas próximas.</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="text-blue-400"></i>
+                            <span>Total anonimato e segurança para as testemunhas.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-blue-800 p-6 rounded-2xl">
+                        <h4 class="text-3xl font-bold text-blue-300 mb-1">2026</h4>
+                        <p class="text-sm text-blue-200">Pronto para o futuro da segurança urbana.</p>
+                    </div>
+                    <div class="bg-blue-800 p-6 rounded-2xl">
+                        <h4 class="text-3xl font-bold text-blue-300 mb-1">100%</h4>
+                        <p class="text-sm text-blue-200">Anônimo e criptografado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funcionalidades -->
+    <section id="funcionalidades" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Funcionalidades Principais</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto rounded"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-2xl border border-gray-100 hover:shadow-xl transition group">
+                    <div
+                        class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition">
+                        <i data-lucide="edit-3" class="text-blue-600 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Registro Imediato</h3>
+                    <p class="text-gray-600">Registre ocorrências com data, hora e local precisos em segundos.</p>
+                </div>
+                <div class="p-8 rounded-2xl border border-gray-100 hover:shadow-xl transition group">
+                    <div
+                        class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition">
+                        <i data-lucide="users" class="text-blue-600 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Identificação de Testemunhas</h3>
+                    <p class="text-gray-600">O sistema cruza dados para encontrar quem estava no local no exato momento.
+                    </p>
+                </div>
+                <div class="p-8 rounded-2xl border border-gray-100 hover:shadow-xl transition group">
+                    <div
+                        class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition">
+                        <i data-lucide="flame" class="text-blue-600 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Mapa de Calor</h3>
+                    <p class="text-gray-600">Visualize as zonas de maior risco na cidade através de dados colaborativos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Time -->
+    <section class="py-24 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-900">Senakku No Gakusei</h2>
+                <p class="text-gray-500 mt-2 font-medium">Desenvolvedores do Projeto</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-6">
+                <!-- Nickolas Anderson -->
+                <a href="https://github.com/JovemPadrawn" target="_blank"
+                    class="flex items-center gap-2 px-6 py-2 bg-blue-50 text-blue-800 rounded-full font-medium hover:bg-blue-100 transition border border-blue-100 shadow-sm group">
+                    <img src="../img/github.svg"   class="w-4 h-4 text-gray-500 group-hover:text-blue-800"/> Nickolas Anderson
+                </a>
+                <!-- Daniel Rocha -->
+                <a href="https://github.com/EidenFox" target="_blank"
+                    class="flex items-center gap-2 px-6 py-2 bg-blue-50 text-blue-800 rounded-full font-medium hover:bg-blue-100 transition border border-blue-100 shadow-sm group">
+                    <img src="../img/github.svg" class="w-4 h-4 text-gray-500 group-hover:text-blue-800" /> Daniel Rocha
+                </a>
+                <!-- Kaua Cotes -->
+                <a href="https://github.com/kauan-cotes" target="_blank"
+                    class="flex items-center gap-2 px-6 py-2 bg-blue-50 text-blue-800 rounded-full font-medium hover:bg-blue-100 transition border border-blue-100 shadow-sm group">
+                    <img src="../img/github.svg" class="w-4 h-4 text-gray-500 group-hover:text-blue-800" /> Kauan Cotes
+                </a>
+                <!-- Rian Leão -->
+                <a href="https://github.com/rianleao" target="_blank"
+                    class="flex items-center gap-2 px-6 py-2 bg-blue-50 text-blue-800 rounded-full font-medium hover:bg-blue-100 transition border border-blue-100 shadow-sm group">
+                    <img src="../img/github.svg" class="w-4 h-4 text-gray-500 group-hover:text-blue-800" /> Rian Leão
+                </a>
+                <!-- Eduardo Nunes -->
+                <a href="https://github.com/EdwardLeywin" target="_blank"
+                    class="flex items-center gap-2 px-6 py-2 bg-blue-50 text-blue-800 rounded-full font-medium hover:bg-blue-100 transition border border-blue-100 shadow-sm group">
+                    <img src="../img/github.svg" class="w-4 h-4 text-gray-500 group-hover:text-blue-800" /> Eduardo
+                    Nunes
+                </a>
+                <!-- Matheus Costa -->
+                <a href="https://github.com/1tsc0sta" target="_blank"
+                    class="flex items-center gap-2 px-6 py-2 bg-blue-50 text-blue-800 rounded-full font-medium hover:bg-blue-100 transition border border-blue-100 shadow-sm group">
+                    <img src="../img/github.svg" class="w-4 h-4 text-gray-500 group-hover:text-blue-800" /> Matheus
+                    Costa
+                </a>
+            </div>
+            <p class="text-center mt-10 text-gray-400 text-sm italic">Maringá – PR &rarr; Curitiba – PR | 2026</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex items-center justify-center gap-2 mb-6">
+                <i data-lucide="shield-check" class="text-blue-500 w-6 h-6"></i>
+                <span class="text-xl font-bold">GeoGuard</span>
+            </div>
+            <p class="text-gray-400 max-w-md mx-auto mb-8">
+                Transformando usuários em uma rede colaborativa de segurança para prevenir riscos e gerar justiça.
+            </p>
+            <div class="pt-8 border-t border-gray-800 text-sm text-gray-500">
+                &copy; 2026 GeoGuard. Desenvolvido para um futuro mais seguro.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Inicializar ícones Lucide
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
